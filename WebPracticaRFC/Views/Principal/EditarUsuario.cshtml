@@ -1,0 +1,52 @@
+﻿@using Entidades
+@model E_Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditarUsuario</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Ingresa los siguientes datos
+        </h1>
+        @if (TempData["ERROR"] != null)
+        {
+            <div class="alert alert-danger">
+                <b>Sucedio un error:@TempData["ERROR"]</b>
+            </div>
+        }
+        <form method="post" action="/Principal/EditarUsuario">
+            <input type="hidden" name="idUsuario" value="@Model.idUsuario" />
+            <label>Nombre(s):</label>
+            @Html.TextBox("nombre", Model.nombre, new { @class = "form-control", required = "required" })
+            <br />
+
+            <label>Apellido Paterno:</label>
+            @Html.TextBox("apellidoPaterno", Model.apellidoPaterno, new { @class = "form-control", required = "required" })
+            <br />
+
+            <label>Apellido Materno:</label>
+            @Html.TextBox("apellidoMaterno", Model.apellidoMaterno, new { @class = "form-control" })
+            <br />
+
+            <label>Fecha de Nacimiento:</label>
+            @Html.TextBox("fechaNacimiento", Model.fechaNacimiento.ToString("yyyy-MM-dd"), new { @class = "form-control", required = "required", Type = "date" })
+
+            <label>RFC:</label>
+            @Html.TextBox("codigoRFC", Model.codigoRFC, new { @class = "form-control", @readonly = true })
+
+            <input type="submit" value="Actualizar Datos" class="btn btn-dark" />
+        </form>
+
+    </div>
+</body>
+</html>

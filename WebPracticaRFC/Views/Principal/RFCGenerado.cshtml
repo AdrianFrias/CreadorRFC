@@ -1,0 +1,35 @@
+﻿@using Entidades
+@model E_Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RFCGenerado</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    
+</head>
+<body>
+    <div class="mx-auto text-center" style="margin-top:170px;">
+        <h1>Tu RFC es:</h1>
+        <br />
+        <div class=" d-flex justify-content-center">
+            @Html.TextBox("codigoRFC", Model.codigoRFC, new { @class = "form-control text-center centered-textbox", style = "width: 300px;", @readonly = true })
+
+        </div>
+        <br />
+        <a href="/Principal/VistaIngresar" class="btn btn-dark">Generar otro RFC</a>
+        <br />
+        <br />
+        <a href="/Principal/VistaBaseDatos" class="btn btn-dark">Ir a base de datos</a>
+        <br />
+        <br />
+        <a href="/Principal/Index" class="btn btn-dark">Salir</a>
+    </div>
+</body>
+</html>

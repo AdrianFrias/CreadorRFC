@@ -1,0 +1,9 @@
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\bin\Debug\Datos.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\bin\Debug\Datos.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\bin\Debug\Entidades.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\bin\Debug\Entidades.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\obj\Debug\Datos.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Datos\obj\Debug\Datos.pdb

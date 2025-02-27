@@ -1,0 +1,6 @@
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\bin\Debug\Entidades.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\bin\Debug\Entidades.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\obj\Debug\Entidades.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\obj\Debug\Entidades.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache

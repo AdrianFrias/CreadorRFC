@@ -1,0 +1,11 @@
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Bussiness.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Bussiness.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Datos.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Entidades.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Datos.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\bin\Debug\Entidades.pdb
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\obj\Debug\Bussiness.csproj.AssemblyReference.cache
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\obj\Debug\Bussiness.csproj.CoreCompileInputs.cache
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\obj\Debug\Bussiness.csproj.CopyComplete
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\obj\Debug\Bussiness.dll
+C:\Users\ADRIAN\Desktop\Laptop\Bootcamp\SolPracticaRFC\Bussiness\obj\Debug\Bussiness.pdb

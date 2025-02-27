@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IngresarDatos</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Ingresa los siguientes datos
+        </h1>
+        @if (TempData["ERROR"] != null)
+        {
+            <div class="alert alert-danger">
+                <b>Sucedio un error:@TempData["ERROR"]</b>
+            </div>
+        }
+        <form method="post" action="/Principal/AgregarUsuario">
+            <label>Nombre(s):</label>
+            @Html.TextBox("nombre", null, new { @class = "form-control", required = "required", pattern = "[^0-9]+", placeholder = "Escribe tu(s) nombre(s)" })
+            <br />
+
+            <label>Apellido Paterno:</label>
+            @Html.TextBox("apellidoPaterno", null, new { @class = "form-control", required = "required", pattern = "[^0-9]+", placeholder = "Escribe tu primer apellido" })
+            <br />
+
+            <label>Apellido Materno:</label>
+            @Html.TextBox("apellidoMaterno", null, new { @class = "form-control", pattern = "[^0-9]+" , placeholder = "Escribe tu segundo apellido" })
+            <br />
+
+            <label>Fecha de Nacimiento:</label>
+            @Html.TextBox("fechaNacimiento", null, new { @class = "form-control", required = "required", Type = "date" })
+
+            <br />
+            <input type="submit" value="Genera tu RFC" class="btn btn-dark" />
+        </form>
+
+    </div>
+</body>
+</html>
