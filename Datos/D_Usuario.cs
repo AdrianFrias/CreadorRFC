@@ -150,5 +150,39 @@ namespace Datos
                 conexion.Close();
             }
         }
+        public List<E_Usuario> ReadBuscador(string search)
+        {
+            SqlConnection conexion = new SqlConnection(cadenaconexion);
+            List<E_Usuario> encontrados = new List<E_Usuario>();
+            try
+            {
+                conexion.Open();
+                SqlCommand comando = new SqlCommand("spRFCBuscador", conexion);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@sp_buscador", search);
+                SqlDataReader reader = comando.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    E_Usuario usuario = new E_Usuario();
+                    usuario.idUsuario = Convert.ToInt32(reader["idUsuario"]);
+                    usuario.nombre = Convert.ToString(reader["nombre"]);
+                    usuario.apellidoPaterno = Convert.ToString(reader["apPaterno"]);
+                    usuario.apellidoMaterno = Convert.ToString(reader["apMaterno"]);
+                    usuario.fechaNacimiento = Convert.ToDateTime(reader["fechaNacimiento"]);
+                    usuario.codigoRFC = Convert.ToString(reader["codigoRFC"]);
+                    encontrados.Add(usuario);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return encontrados;
+        }    
     }
 }

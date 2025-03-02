@@ -90,7 +90,8 @@ namespace WebPracticaRFC.Controllers
         {
             List<E_Usuario> lista = new List<E_Usuario>();
             B_Usuario bussiness = new B_Usuario();
-            lista = bussiness.Buscador(Buscador);
+            //lista = bussiness.Buscador(Buscador);
+            lista = bussiness.Buscador2(Buscador);
             return View("BaseDatos", lista);
         }
 

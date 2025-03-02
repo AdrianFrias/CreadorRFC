@@ -38,13 +38,18 @@ namespace Bussiness
                     if (cont > 1)
                     {
                         cont = 1;
-                        //Con i incluye los todos
+                        //Con i incluye todos los repetidos
                         //con j incluye los solo los que se repiten y los orginales no los marca
                         usuarios[j].RFCduplicado = true;
                     }
                 }
             }
         }
+        /// <summary>
+        /// Buscador usando solo codigo de C#
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns></returns>
         public List<E_Usuario> Buscador(string cadena)
         {
             if (cadena == null)
@@ -66,6 +71,19 @@ namespace Bussiness
             }
             return match;
 
+        }
+        /// <summary>
+        /// Bsucador usando SQL SERVER
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns></returns>
+        public List<E_Usuario> Buscador2(string cadena)
+        {
+            List<E_Usuario> match = new List<E_Usuario>();
+            D_Usuario datos = new D_Usuario();
+            match = datos.ReadBuscador(cadena);
+            RFCduplicados(match);
+            return match;
         }
 
         public E_Usuario ObtenerUsuario(int ID)
@@ -102,7 +120,7 @@ namespace Bussiness
             string Letras3;
 
 
-            Letras2 = ObtenerVocalInterna(usuario.apellidoPaterno);
+            Letras2 = ObtenersegundaLetraApellido(usuario.apellidoPaterno);
             //Excepción 5
             // Reviso si existe apelldio materno
             //si existen dos apellidos, si el primer apellido no tiene vocal interna, se le asignará una "X" en la segunda posición.
@@ -179,6 +197,12 @@ namespace Bussiness
                 return subs[1].Substring(0, 1);  //tooma la primera letra del segundo nombre
             }
             return subs[0].Substring(0, 1);  //toma la primera letra del primer nombre
+        }
+        public string ObtenersegundaLetraApellido(string apellido)
+        {
+            string[] subs = apellido.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string vocal = ObtenerVocalInterna(subs[0]);
+            return ObtenerVocalInterna(subs[0]);  //toma la primera letra del primer nombre
         }
 
         public string RevisarPalabras(string codigo)
