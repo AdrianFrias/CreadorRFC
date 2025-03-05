@@ -17,9 +17,14 @@ namespace Bussiness
             D_Usuario datos = new D_Usuario();
             Usuarios = datos.ReadTodos();
             //Usuarios = Buscador("ARTURO");
-            RFCduplicados(Usuarios);
+            //RFCduplicados(Usuarios);
+            RFCduplicados2(Usuarios);
             return Usuarios;
         }
+        /// <summary>
+        /// Funcion para obtener los RFC duplicados O(n^2)
+        /// </summary>
+        /// <param name="usuarios"></param>
         public void RFCduplicados(List<E_Usuario> usuarios)
         {
             //Obtener RFC
@@ -42,6 +47,40 @@ namespace Bussiness
                         //con j incluye los solo los que se repiten y los orginales no los marca
                         usuarios[j].RFCduplicado = true;
                     }
+                }
+            }
+        }
+        /// <summary>
+        /// Funcion para obtener los RFC duplicados O(n)
+        /// </summary>
+        /// <param name="usuarios"></param>
+        public void RFCduplicados2(List<E_Usuario> usuarios)
+        {
+            //el priero es el valor de la llave y el segundo su valor
+            //La llave sera el RFC creado y el valor sera lacantidad de datosque tiene cada uno
+            Dictionary<string, int> contadorRFC = new Dictionary<string, int>();
+            //reviso si mi RFC ya esta en el diccionario
+            //Si no esta lo agrego con un valor de 1
+            //Si ya aparecio le sumara 1 al valor que tenga
+            foreach(E_Usuario user in usuarios)
+            {
+                if (!contadorRFC.ContainsKey(user.codigoRFC))
+                {
+                    contadorRFC[user.codigoRFC] = 1;
+                }
+                else
+                {
+                    contadorRFC[user.codigoRFC]++;
+                }
+            }
+            //Recorrer la lista de usuarios en sentido inverso
+            for(int i = usuarios.Count-1; i >= 0; i--)
+            {
+                //Si en el diccionario esta el RFC con un valor mayor a 1, se pone que ese RFC es un duplicado y disminuira la cantidad de duplicados faltante por revisar
+                if(contadorRFC[usuarios[i].codigoRFC] > 1)
+                {
+                    usuarios[i].RFCduplicado = true;
+                    contadorRFC[usuarios[i].codigoRFC]--;
                 }
             }
         }
@@ -209,7 +248,7 @@ namespace Bussiness
         {
             HashSet<string> nombres = new HashSet<string> {
         "BUEI", "CACA", "CAGA", "CAKA", "COGE", "COJE", "COJO", "FETO", "JOTO", "KACO", "KAGO", "KOJO", "KULO", "MAMO", "MEAS", "MION", "MULA", "PEDO", "PUTA", "QULO",
-        "BUEY", "CACO", "CAGO", "CAKO", "COJA", "COJI", "CULO", "GUEY", "KACA", "KAGA", "KOGE", "KAKA", "MAME", "MEAR", "MEON", "MOCO", "PEDA", "PENE", "PUTO", "RATA"
+        "BUEY", "CACO", "CAGO", "CAKO", "COJA", "COJI", "CULO", "GUEY", "KACA", "KAGA", "KOGE", "KAKA", "MAME", "MEAR", "MEON", "MOCO", "PEDA", "PENE", "PITO", "PUTO", "RATA"
             };
 
             //Regresa plabra vonc censura

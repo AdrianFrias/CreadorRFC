@@ -94,6 +94,10 @@ namespace WebPracticaRFC.Controllers
             lista = bussiness.Buscador2(Buscador);
             return View("BaseDatos", lista);
         }
+        public ActionResult Salir()
+        {
+            return RedirectToAction("Index");
+        }
 
     }
 }
